@@ -20,12 +20,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   void initState() {
     super.initState();
-    // weatherFuture = _getWeather();
   }
-
-  // _getWeather() async {
-  //   return await _dataService.getWeather(_cityTextController.text);
-  // }
 
   @override
   Widget build(BuildContext context) {
