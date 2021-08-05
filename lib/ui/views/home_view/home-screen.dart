@@ -20,6 +20,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   void initState() {
     super.initState();
+    _cityTextController.text = widget.referrarCode ?? '';
   }
 
   @override
@@ -27,11 +28,6 @@ class _HomeScreenState extends State<HomeScreen> {
     void _search() async {
       final response = await _dataService.getWeather(_cityTextController.text);
       setState(() => _response = response);
-    }
-
-    var referrarCode = widget.referrarCode;
-    if (referrarCode != null) {
-      _cityTextController.text = referrarCode ?? '';
     }
 
     return Scaffold(
