@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_tutorials/ui/views/home_view/widget/create_referral_code.dart';
-import 'package:flutter_tutorials/view_models/home_view_model.dart';
-import 'package:provider/provider.dart';
 
 class HomeView extends StatelessWidget {
   static const String routeName = '/home';
@@ -10,16 +7,9 @@ class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text('Asim Referral System')),
-      body: Consumer<HomeViewModel>(
-        builder: (_, model, child) => CreateReferralCode(
-          (String referralCode) {
-            model.deeplinkApi.createReferralLink(referralCode);
-            return Container(
+      body:Container(
               child: Text('Home'),
-            );
-          },
-        ),
-      ),
+      )
     );
   }
 }
