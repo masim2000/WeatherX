@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_tutorials/ui/views/auth_view/start_view.dart';
-import 'package:flutter_tutorials/ui/views/home_view/home_view.dart';
 import 'package:flutter_tutorials/ui/views/home_view/home-screen.dart';
 
 class GeneratedRoute {
@@ -18,18 +16,12 @@ class GeneratedRoute {
   static Route<dynamic> onGenerate(RouteSettings settings) {
     final arg = settings.arguments;
     switch (settings.name) {
-      case StartView.routeName:
-        return MaterialPageRoute(builder: (_) => StartView());
-        break;
       case HomeScreen.routeName:
         if (arg is String) {
           return MaterialPageRoute(
               builder: (_) => HomeScreen(referrarCode: arg));
         }
         return MaterialPageRoute(builder: (_) => HomeScreen());
-
-      case HomeView.routeName:
-        return MaterialPageRoute(builder: (_) => HomeView());
       default:
         return _onPageNotFound();
     }

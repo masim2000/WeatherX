@@ -1,5 +1,5 @@
 import 'package:flutter_tutorials/services/data-service.dart';
-import 'package:flutter_tutorials/models/weather-mode.dart';
+import 'package:flutter_tutorials/models/weather-model.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
